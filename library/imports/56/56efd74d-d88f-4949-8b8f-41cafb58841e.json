@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "log_panel",
+    "texture": "d3501624-93c3-49d0-84aa-66dfc0f8efe3",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      600,
+      393
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      600,
+      393
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
