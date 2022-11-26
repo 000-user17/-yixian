@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "背包面板",
+    "texture": "d6409b4c-5121-4cc7-b79f-7fdfb3ceeab8",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      658,
+      851
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      658,
+      851
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

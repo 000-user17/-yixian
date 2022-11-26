@@ -30,33 +30,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
-var NewClass = /** @class */ (function (_super) {
-    __extends(NewClass, _super);
-    function NewClass() {
+var setup_panel = /** @class */ (function (_super) {
+    __extends(setup_panel, _super);
+    function setup_panel() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.label = null;
-        _this.text = 'hello';
+        _this.isplay = true;
         return _this;
-        // update (dt) {}
     }
     // LIFE-CYCLE CALLBACKS:
     // onLoad () {}
-    NewClass.prototype.start = function () {
-        //触摸设置面板
+    //播放音乐
+    setup_panel.prototype.start = function () {
+        var _this = this;
+        //触摸打开和关闭声音
         this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
+            if (_this.isplay) {
+                cc.audioEngine.pauseAll();
+                _this.isplay = false;
+            }
+            else {
+                cc.audioEngine.resumeAll();
+                _this.isplay = true;
+            }
         });
     };
-    __decorate([
-        property(cc.Label)
-    ], NewClass.prototype, "label", void 0);
-    __decorate([
-        property
-    ], NewClass.prototype, "text", void 0);
-    NewClass = __decorate([
+    setup_panel.prototype.update = function (dt) {
+    };
+    setup_panel = __decorate([
         ccclass
-    ], NewClass);
-    return NewClass;
+    ], setup_panel);
+    return setup_panel;
 }(cc.Component));
-exports.default = NewClass;
+exports.default = setup_panel;
 
 cc._RF.pop();

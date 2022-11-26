@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shandian2",
+    "texture": "5576a66e-584b-42c6-9da6-8916cded8f29",
+    "atlas": "",
+    "rect": [
+      20,
+      34,
+      623,
+      921
+    ],
+    "offset": [
+      2.5,
+      -1
+    ],
+    "originalSize": [
+      658,
+      987
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

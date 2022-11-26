@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "云朵5",
+    "texture": "a62d2f45-0d76-4f95-9fe0-4f584b949681",
+    "atlas": "",
+    "rect": [
+      0,
+      63,
+      650,
+      487
+    ],
+    "offset": [
+      0,
+      18.5
+    ],
+    "originalSize": [
+      650,
+      650
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

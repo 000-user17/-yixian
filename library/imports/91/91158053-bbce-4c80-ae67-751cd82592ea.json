@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "player_0126_图层-114",
+    "texture": "c36a3724-1be7-4b74-a751-b417549caf0b",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      309,
+      607
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      309,
+      607
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "卡牌",
+    "texture": "c829f0fd-8c9c-4fba-8c6c-15446e88dc89",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      365,
+      639
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      365,
+      639
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

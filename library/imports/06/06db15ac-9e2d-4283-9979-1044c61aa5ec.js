@@ -35,85 +35,50 @@ var exp = /** @class */ (function (_super) {
     function exp() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.xiuxian = null;
-        //人物等级
         _this.level = 0;
-        //人物当前经验值
         _this.exp_now = 0;
         return _this;
     }
     // LIFE-CYCLE CALLBACKS:
-    exp.prototype.exp_init = function () {
-        this.level = 0;
-        this.exp_now = 0;
-    };
-    //用于自动保存节点获取当前的exp信息
-    exp.prototype.exp_information = function () {
-        return [this.level, this.exp_now];
-    };
-    //获取自动保存的exp信息
-    exp.prototype.exp_auto_save = function (autosave) {
-        var _this = this;
-        this.level = autosave[0], this.exp_now = autosave[1];
-        //拿到了自动保存的数值，再修改经验值进度条
-        var exp = this.node.getComponent(cc.Sprite);
-        this.schedule(function (as) {
-            if (as === void 0) { as = exp; }
-            exp.fillRange += (1 / _this.exp_required()); //经验exp.fillRange到1表示经验满，经验值增长的可视化横条，1/this.exp_required()表示每间隔一定时间增加这么多的经验条显示，实现动态增长
-        }, 1 / this.exp_required() / 25, this.exp_now);
-    };
-    //不同等级的所需经验
-    exp.prototype.exp_required = function () {
-        return (this.level + 1) * 200; //可以设置其他单调递增函数
-    };
-    //判断经验值是否溢出
-    exp.prototype.exp_filled = function (exp_now, exp_add) {
-        //如果经验值增长超过最大经验值，则设置为当前等级的最大经验值，否则直接相加作为当前经验值
-        if ((exp_now + exp_add) <= this.exp_required()) {
-            this.exp_now += exp_add;
-        }
-        else {
-            this.exp_now = this.exp_required();
-        }
-    };
-    //增长经验条的方法
-    exp.prototype.exp_gain = function (event_ID, event_exp) {
-        var _this = this;
-        //获取到exp属性
-        var exp = this.node.getComponent(cc.Sprite);
-        //根据不同的事件获取不同的经验值
-        switch (event_ID) {
-            case event_ID = 0:
-                //延时函数让经验条可以连续上涨
-                this.schedule(function (as) {
-                    if (as === void 0) { as = exp; }
-                    exp.fillRange += (1 / _this.exp_required()); //经验exp.fillRange到1表示经验满，经验值增长的可视化横条，1/this.exp_required()表示每间隔一定时间增加这么多的经验条显示，实现动态增长
-                }, 1 / this.exp_required() / 25, event_exp);
-                this.exp_filled(this.exp_now, event_exp); //当前经验值数值增长
-                break;
-            default:
-                break;
-        }
-    };
-    exp.prototype.onLoad = function () {
-        this.exp_init(); //初始化为exp各项属性值
-    };
+    // onLoad () {}
     exp.prototype.start = function () {
-        var _this = this;
-        //获取persisit_node中自动保存的经验值
-        this.exp_auto_save(cc.find('persist_node').getComponent('persist_node').exp_inf_message());
-        //触摸经验条面板，测试经验条增加
+        var _a;
+        _a = cc.find('persist_node').getComponent('persist_node').exp_init(), this.level = _a[0], this.exp_now = _a[1]; //初始化已经保存的经验条
+        //cc.find('persist_node').getComponent('persist_node').exp_gain(1000);  //测试时候用的，一开始就填满经验条 【供测试】
+        //触摸经验条面板，测试经验条增加，【供测试】
         this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
-            _this.exp_gain(0, 100);
+            //cc.find('persist_node').getComponent('persist_node').exp_gain(200);
+            //cc.find('persist_node').getComponent('persist_node').log_write("经验值增加了~");
         });
     };
     exp.prototype.update = function (dt) {
+        var _a;
+        _a = cc.find('persist_node').getComponent('persist_node').exp_inf(), this.level = _a[0], this.exp_now = _a[1];
+        var sub_level = cc.find('persist_node').getComponent('persist_node').get_sublevel();
+        this.node.getComponentInChildren(cc.Label).string = Math.round(this.exp_now).toString() + '/' +
+            Math.round(cc.find('persist_node').getComponent('persist_node').exp_required()).toString();
         //如果经验值满，则可以进入修仙界面
-        if (this.exp_now == this.exp_required()) {
-            this.xiuxian.active = true;
+        if (this.exp_now >= cc.find('persist_node').getComponent('persist_node').exp_required() &&
+            this.node.getComponent(cc.Sprite).fillRange >= 1) {
+            if (sub_level == '后期') {
+                this.node.getParent().getChildByName('upgrade').getComponent(cc.Button).interactable = true;
+                this.node.getParent().getChildByName('upgrade').getChildByName('Background').color = cc.Color.GREEN;
+            }
+            else {
+                cc.find('persist_node').getComponent('persist_node').exp_init();
+                cc.find('persist_node').getComponent('persist_node').up_sublevel();
+                //突破动画
+            }
         }
-        else {
-            this.xiuxian.active = false;
+        /*
+        if(this.exp_now == cc.find('persist_node').getComponent('persist_node').exp_required() && this.node.getComponent(cc.Sprite).fillRange >= 1){
+            this.xiuxian.active=true;
+
         }
+        else{
+            this.xiuxian.active=false;
+        }
+        */
     };
     __decorate([
         property(cc.Node)

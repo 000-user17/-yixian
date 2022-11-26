@@ -1,0 +1,32 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "yichu",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.6333333333333333,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "position": [
+        {
+          "frame": 0,
+          "value": [
+            521,
+            518
+          ],
+          "motionPath": []
+        },
+        {
+          "frame": 0.6333333333333333,
+          "value": [
+            517,
+            698
+          ]
+        }
+      ]
+    }
+  },
+  "events": []
+}

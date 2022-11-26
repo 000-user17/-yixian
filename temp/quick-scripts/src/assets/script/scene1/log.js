@@ -45,7 +45,20 @@ var log = /** @class */ (function (_super) {
         var _this = this;
         //触摸设置出现设置面板
         this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
-            _this.log_panel.active = true;
+            cc.loader.loadRes("菜单", cc.AudioClip, function (res, clip) {
+                //播放音乐
+                var audioID = cc.audioEngine.playEffect(clip, false);
+                cc.audioEngine.setVolume(audioID, 0.3);
+                //停止播放音乐
+                //cc.audioEngine.stop(audioID);
+            });
+            var persist = cc.find('persist_node').getComponent('persist_node');
+            if (persist.focus == null) {
+                persist.is_create_bubble = false; //点击关闭产生气泡
+                _this.log_panel.active = true;
+                persist.focus = _this.log_panel.active;
+                cc.find('persist_node').getComponent('persist_node').log_init(true);
+            }
         });
     };
     __decorate([

@@ -38,10 +38,11 @@ export default class bag_panel extends cc.Component {
 
 
         //触摸背包
-        this.node.on(cc.Node.EventType.TOUCH_START, (event)=>{
-            
+        this.node.on(cc.Node.EventType.TOUCH_MOVE, (event)=>{  //拖动属性面板
+            var delta = event.touch.getDelta();   //获得鼠标的位置变化坐标
+            this.node.x += delta.x;
+            this.node.y += delta.y;
 
-        
         });
 
     }
@@ -49,7 +50,7 @@ export default class bag_panel extends cc.Component {
      update (dt) {
 
         //获取bag物品数量,实时更新
-        let item_array = cc.find('bag').getComponent("bag").getitem(); //由于player脚本初始化该节点父节点为cc.director.getScene()，所以用cc.find顺着根目录查找到player节点
+        let item_array = cc.find('persist_node').getComponent("persist_node").getitem(); //由于player脚本初始化该节点父节点为cc.director.getScene()，所以用cc.find顺着根目录查找到player节点
         
         //将属性值投射到属性值面板上
         this.it0 = this.node.getChildByName("item0").getComponent(cc.Label);

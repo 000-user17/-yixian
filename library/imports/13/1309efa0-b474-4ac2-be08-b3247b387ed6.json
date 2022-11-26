@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "日志",
+    "texture": "74baf4f7-98b7-4f51-87b8-67a30aa8f43d",
+    "atlas": "",
+    "rect": [
+      9,
+      54,
+      206,
+      186
+    ],
+    "offset": [
+      -0.5,
+      -16
+    ],
+    "originalSize": [
+      225,
+      262
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

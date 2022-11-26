@@ -1,0 +1,587 @@
+Cocos Service 2022/11/20 下午2:37:37 xiuxian ver_10	copy file "C:\Users\DELL\.CocosCreator\services\analytics/resources/js/cocosAnalytics.min.3.0.2.js to "F:\publish\wechatgame\ccAnalytics.min.js"
+
+Cocos Service 2022/11/20 下午2:37:37 xiuxian ver_10	insert code "require("ccAnalytics.min.js"); to "F:\publish\wechatgame\game.js" in line 17
+
+Cocos Service 2022/11/20 下午9:16:23 xiuxian ver_10	delete file from"F:\publish\web-mobile\frameworks\runtime-src\proj.android-studio\app\src\org\cocos2dx\javascript\service\ServiceAnalytics.java"
+
+Cocos Service 2022/11/20 下午9:16:24 xiuxian ver_10	delete file from"F:\publish\web-mobile\frameworks\runtime-src\proj.android-studio\app\libs\libcocosanalytics.aar"
+
+Cocos Service 2022/11/20 下午9:16:24 xiuxian ver_10	delete file from"F:\publish\web-mobile\frameworks\runtime-src\proj.android-studio\game\src\org\cocos2dx\javascript\service\ServiceAnalytics.java"
+
+Cocos Service 2022/11/20 下午9:16:24 xiuxian ver_10	delete file from"F:\publish\web-mobile\frameworks\runtime-src\proj.android-studio\game\libs\libcocosanalytics.aar"
+
+Cocos Service 2022/11/20 下午9:19:48 xiuxian ver_10	delete file from"F:\publish\web-desktop\frameworks\runtime-src\proj.android-studio\app\src\org\cocos2dx\javascript\service\ServiceAnalytics.java"
+
+Cocos Service 2022/11/20 下午9:19:48 xiuxian ver_10	delete file from"F:\publish\web-desktop\frameworks\runtime-src\proj.android-studio\app\libs\libcocosanalytics.aar"
+
+Cocos Service 2022/11/20 下午9:19:48 xiuxian ver_10	delete file from"F:\publish\web-desktop\frameworks\runtime-src\proj.android-studio\game\src\org\cocos2dx\javascript\service\ServiceAnalytics.java"
+
+Cocos Service 2022/11/20 下午9:19:48 xiuxian ver_10	delete file from"F:\publish\web-desktop\frameworks\runtime-src\proj.android-studio\game\libs\libcocosanalytics.aar"
+
+Cocos Service 2022/11/20 下午9:25:55 xiuxian ver_10	replace code "appid = '689255629' to "C:\Users\DELL\.CocosCreator\services\analytics\resources\cocos-analytics-preview-script\main.js" with regular "/appid = '.*'/"
+
+Cocos Service 2022/11/20 下午9:25:55 xiuxian ver_10	replace code "store = '' to "C:\Users\DELL\.CocosCreator\services\analytics\resources\cocos-analytics-preview-script\main.js" with regular "/store = '.*'/"
+
+Cocos Service 2022/11/20 下午9:26:22 xiuxian ver_10	replace code "appid = '689255629' to "C:\Users\DELL\.CocosCreator\services\analytics\resources\cocos-analytics-preview-script\main.js" with regular "/appid = '.*'/"
+
+Cocos Service 2022/11/20 下午9:26:22 xiuxian ver_10	replace code "store = '' to "C:\Users\DELL\.CocosCreator\services\analytics\resources\cocos-analytics-preview-script\main.js" with regular "/store = '.*'/"
+
+Cocos Service 2022/11/20 下午9:27:31 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\web-desktop\index.html" in line 36
+
+Cocos Service 2022/11/20 下午9:27:31 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: 'H5',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\web-desktop\main.js"
+
+Cocos Service 2022/11/20 下午9:30:57 xiuxian ver_10	replace code "appid = '689255629' to "C:\Users\DELL\.CocosCreator\services\analytics\resources\cocos-analytics-preview-script\main.js" with regular "/appid = '.*'/"
+
+Cocos Service 2022/11/20 下午9:30:57 xiuxian ver_10	replace code "store = '160156' to "C:\Users\DELL\.CocosCreator\services\analytics\resources\cocos-analytics-preview-script\main.js" with regular "/store = '.*'/"
+
+Cocos Service 2022/11/20 下午9:32:49 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\web-desktop\index.html" in line 36
+
+Cocos Service 2022/11/20 下午9:32:49 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: '160156',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\web-desktop\main.js"
+
+Cocos Service 2022/11/20 下午9:35:31 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\web-desktop\index.html" in line 36
+
+Cocos Service 2022/11/20 下午9:35:31 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: '160156',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\web-desktop\main.js"
+
+Cocos Service 2022/11/20 下午9:36:44 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\web-desktop\index.html" in line 36
+
+Cocos Service 2022/11/20 下午9:36:44 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: '160156',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\web-desktop\main.js"
+
+Cocos Service 2022/11/20 下午9:38:35 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\web-desktop\index.html" in line 36
+
+Cocos Service 2022/11/20 下午9:38:35 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: '160156',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\web-desktop\main.js"
+
+Cocos Service 2022/11/20 下午9:40:57 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\web-desktop\index.html" in line 36
+
+Cocos Service 2022/11/20 下午9:40:57 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: '160156',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\web-desktop\main.js"
+
+Cocos Service 2022/11/20 下午9:52:28 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\web-desktop\index.html" in line 36
+
+Cocos Service 2022/11/20 下午9:52:28 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: '160156',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\web-desktop\main.js"
+
+Cocos Service 2022/11/20 下午9:55:01 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\web-desktop\index.html" in line 36
+
+Cocos Service 2022/11/20 下午9:55:01 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: '160156',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\web-desktop\main.js"
+
+Cocos Service 2022/11/20 下午9:59:07 xiuxian ver_10	copy file "C:\Users\DELL\.CocosCreator\services\analytics/resources/js/cocosAnalytics.min.3.0.2.js to "F:\publish\huawei\src\cocosAnalytics.min.3.0.2.js"
+
+Cocos Service 2022/11/20 下午9:59:07 xiuxian ver_10	insert code "        require("src/cocosAnalytics.min.3.0.2.js"); to "F:\publish\huawei\main.js" in line 126
+
+Cocos Service 2022/11/20 下午9:59:07 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: '160156',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\huawei\main.js"
+
+Cocos Service 2022/11/20 下午9:59:36 xiuxian ver_10	replace code "appid = '689255629' to "C:\Users\DELL\.CocosCreator\services\analytics\resources\cocos-analytics-preview-script\main.js" with regular "/appid = '.*'/"
+
+Cocos Service 2022/11/20 下午9:59:36 xiuxian ver_10	replace code "store = '' to "C:\Users\DELL\.CocosCreator\services\analytics\resources\cocos-analytics-preview-script\main.js" with regular "/store = '.*'/"
+
+Cocos Service 2022/11/20 下午10:02:10 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\web-desktop\index.html" in line 36
+
+Cocos Service 2022/11/20 下午10:02:10 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: 'H5',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\web-desktop\main.js"
+
+Cocos Service 2022/11/20 下午10:04:15 xiuxian ver_10	copy file "C:\Users\DELL\.CocosCreator\services\analytics/resources/js/cocosAnalytics.min.3.0.2.js to "F:\publish\wechatgame\ccAnalytics.min.js"
+
+Cocos Service 2022/11/20 下午10:04:15 xiuxian ver_10	insert code "require("ccAnalytics.min.js"); to "F:\publish\wechatgame\game.js" in line 17
+
+Cocos Service 2022/11/20 下午10:04:15 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: '',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\wechatgame\main.js"
+
+Cocos Service 2022/11/20 下午10:08:26 xiuxian ver_10	copy file "C:\Users\DELL\.CocosCreator\services\analytics/resources/js/cocosAnalytics.min.3.0.2.js to "F:\publish\wechatgame\ccAnalytics.min.js"
+
+Cocos Service 2022/11/20 下午10:08:26 xiuxian ver_10	insert code "require("ccAnalytics.min.js"); to "F:\publish\wechatgame\game.js" in line 17
+
+Cocos Service 2022/11/20 下午10:08:26 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: '',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\wechatgame\main.js"
+
+Cocos Service 2022/11/20 下午10:10:14 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\fb-instant-games\index.html" in line 47
+
+Cocos Service 2022/11/20 下午10:10:14 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: '',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\fb-instant-games\main.js"
+
+Cocos Service 2022/11/20 下午10:23:06 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\web-desktop\index.html" in line 36
+
+Cocos Service 2022/11/20 下午10:23:06 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: 'H5',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\web-desktop\main.js"
+
+Cocos Service 2022/11/20 下午10:42:09 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\web-desktop\index.html" in line 36
+
+Cocos Service 2022/11/20 下午10:42:09 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: 'H5',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\web-desktop\main.js"
+
+Cocos Service 2022/11/20 下午10:44:16 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\web-desktop\index.html" in line 36
+
+Cocos Service 2022/11/20 下午10:44:16 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: 'H5',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\web-desktop\main.js"
+
+Cocos Service 2022/11/20 下午11:07:29 xiuxian ver_10	copy file "C:\Users\DELL\.CocosCreator\services\analytics/resources/js/cocosAnalytics.min.3.0.2.js to "F:\publish\wechatgame\ccAnalytics.min.js"
+
+Cocos Service 2022/11/20 下午11:07:29 xiuxian ver_10	insert code "require("ccAnalytics.min.js"); to "F:\publish\wechatgame\game.js" in line 17
+
+Cocos Service 2022/11/20 下午11:07:29 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: '',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\wechatgame\main.js"
+
+Cocos Service 2022/11/20 下午11:43:50 xiuxian ver_10	copy file "C:\Users\DELL\.CocosCreator\services\analytics/resources/js/cocosAnalytics.min.3.0.2.js to "F:\publish\cocos-play\src\cocosAnalytics.min.3.0.2.js"
+
+Cocos Service 2022/11/20 下午11:43:50 xiuxian ver_10	insert code "        require("src/cocosAnalytics.min.3.0.2.js"); to "F:\publish\cocos-play\main.js" in line 126
+
+Cocos Service 2022/11/20 下午11:43:50 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: '',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\cocos-play\main.js"
+
+Cocos Service 2022/11/20 下午11:55:01 xiuxian ver_10	insert code "
+<script src="https://download.cocos.com/CocosAnalytics/sdk/cocosAnalytics.min.3.0.2.js" charset="utf-8"></script>
+ to "F:\publish\web-desktop\index.html" in line 36
+
+Cocos Service 2022/11/20 下午11:55:01 xiuxian ver_10	append code "
+// Begin Cocos Analytics
+(function () {
+  if((typeof window.location.protocol)==='undefined'){
+    window.location.protocol='';
+  }
+  if ((typeof cocosAnalytics) !== 'undefined'){
+    var initArgs = {
+      appID: '689255629',
+      storeID: 'H5',
+      engine: 'cocos',
+      callNumber: ''
+    };
+    if (!initArgs.appID || !initArgs.storeID) {
+      console.error('请在编辑器设置好 Cocos Analytics 的 appID，如果在Android或者iOS下发布，请选择好对应的渠道');
+      return;
+    }
+    var cocosAnalyticsID1 = cocosAnalytics.init(initArgs);
+    let _global = globalThis || window;
+    _global.cocosAnalyticsID1 = _global.cocosAnalyticsID1 || cocosAnalyticsID1;
+  }
+})();
+// End Cocos Analytics
+     to "F:\publish\web-desktop\main.js"
+

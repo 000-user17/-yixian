@@ -36,95 +36,32 @@ var bag = /** @class */ (function (_super) {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         //属性面板节点，需要再cocos中将预制体拖入
         _this.item_panel = null;
-        //各类物品
-        _this.item0 = 0;
-        _this.item1 = 0;
-        _this.item2 = 0;
-        _this.item3 = 0;
-        _this.item4 = 0;
-        _this.item5 = 0;
-        _this.item6 = 0;
-        _this.item7 = 0;
         return _this;
         // update (dt) {}
     }
-    //设置属性的数值，选中要更改的属性，然后设置数值
-    bag.prototype.setitem = function (itemID, itemnum) {
-        switch (itemID) {
-            case itemID = 0:
-                this.item0 += itemnum;
-                break;
-            case itemID = 1:
-                this.item1 += itemnum;
-                break;
-            case itemID = 2:
-                this.item2 += itemnum;
-                break;
-            case itemID = 3:
-                this.item3 += itemnum;
-                break;
-            case itemID = 4:
-                this.item4 += itemnum;
-                break;
-            case itemID = 5:
-                this.item5 += itemnum;
-                break;
-            case itemID = 6:
-                this.item6 += itemnum;
-                break;
-            case itemID = 7:
-                this.item7 += itemnum;
-                break;
-            default:
-                break;
-        }
-        console.debug("属性值设置成功" + String(this.item7));
-    };
-    //获取属性值，返回属性值数组
-    bag.prototype.getitem = function () {
-        var itemarray = [this.item0, this.item1, this.item2, this.item3, this.item4, this.item5, this.item6, this.item7];
-        //console.debug("属性值获取成功"+ String(itemarray));
-        return itemarray;
-    };
     // onLoad () {}
     bag.prototype.start = function () {
         var _this = this;
-        //set属性方法测试
-        this.setitem(0, 10);
-        //get属性方法测试
-        //this.getitem();
         //触摸人物出现人物属性面板
         this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
-            _this.item_panel.active = true;
+            cc.loader.loadRes("菜单", cc.AudioClip, function (res, clip) {
+                //播放音乐
+                var audioID = cc.audioEngine.playEffect(clip, false);
+                cc.audioEngine.setVolume(audioID, 0.3);
+                //停止播放音乐
+                //cc.audioEngine.stop(audioID);
+            });
+            var persist = cc.find('persist_node').getComponent('persist_node');
+            if (persist.focus == null) {
+                persist.is_create_bubble = false; //点击关闭产生气泡
+                _this.item_panel.active = true;
+                persist.focus = _this.item_panel;
+            }
         });
     };
     __decorate([
         property(cc.Node)
     ], bag.prototype, "item_panel", void 0);
-    __decorate([
-        property
-    ], bag.prototype, "item0", void 0);
-    __decorate([
-        property
-    ], bag.prototype, "item1", void 0);
-    __decorate([
-        property
-    ], bag.prototype, "item2", void 0);
-    __decorate([
-        property
-    ], bag.prototype, "item3", void 0);
-    __decorate([
-        property
-    ], bag.prototype, "item4", void 0);
-    __decorate([
-        property
-    ], bag.prototype, "item5", void 0);
-    __decorate([
-        property
-    ], bag.prototype, "item6", void 0);
-    __decorate([
-        property
-    ], bag.prototype, "item7", void 0);
     bag = __decorate([
         ccclass
     ], bag);

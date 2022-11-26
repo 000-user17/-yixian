@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "设置面板",
+    "texture": "db3902ec-dcec-4cdc-9546-529b7f321fe6",
+    "atlas": "",
+    "rect": [
+      0,
+      10,
+      658,
+      648
+    ],
+    "offset": [
+      0,
+      -5
+    ],
+    "originalSize": [
+      658,
+      658
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

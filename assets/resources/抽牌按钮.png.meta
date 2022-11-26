@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "10258450-1e80-4101-8283-d026bea79aca",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 2012,
+  "height": 1676,
+  "platformSettings": {},
+  "subMetas": {
+    "抽牌按钮": {
+      "ver": "1.0.6",
+      "uuid": "fa78590b-f2c1-4792-9be5-c883f213d204",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "10258450-1e80-4101-8283-d026bea79aca",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 34,
+      "offsetY": 3.5,
+      "trimX": 306,
+      "trimY": 153,
+      "width": 844,
+      "height": 843,
+      "rawWidth": 1388,
+      "rawHeight": 1156,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

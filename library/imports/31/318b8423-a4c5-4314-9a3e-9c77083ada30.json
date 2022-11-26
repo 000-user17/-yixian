@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "筋脉7",
+    "texture": "0096c814-81e1-44d7-a19c-4dff61914fac",
+    "atlas": "",
+    "rect": [
+      55,
+      55,
+      390,
+      390
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      500,
+      500
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

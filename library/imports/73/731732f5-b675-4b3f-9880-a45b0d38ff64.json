@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "人物面板",
+    "texture": "364a0e9d-b40a-44ba-96b6-a0dd8da52a4f",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      658,
+      1012
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      658,
+      1012
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

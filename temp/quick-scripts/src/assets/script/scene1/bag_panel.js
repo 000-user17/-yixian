@@ -48,13 +48,17 @@ var bag_panel = /** @class */ (function (_super) {
     // LIFE-CYCLE CALLBACKS:
     // onLoad () {}
     bag_panel.prototype.start = function () {
+        var _this = this;
         //触摸背包
-        this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
+        this.node.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
+            var delta = event.touch.getDelta(); //获得鼠标的位置变化坐标
+            _this.node.x += delta.x;
+            _this.node.y += delta.y;
         });
     };
     bag_panel.prototype.update = function (dt) {
         //获取bag物品数量,实时更新
-        var item_array = cc.find('bag').getComponent("bag").getitem(); //由于player脚本初始化该节点父节点为cc.director.getScene()，所以用cc.find顺着根目录查找到player节点
+        var item_array = cc.find('persist_node').getComponent("persist_node").getitem(); //由于player脚本初始化该节点父节点为cc.director.getScene()，所以用cc.find顺着根目录查找到player节点
         //将属性值投射到属性值面板上
         this.it0 = this.node.getChildByName("item0").getComponent(cc.Label);
         this.it0.getComponent(cc.Label).string = " " + item_array[0];

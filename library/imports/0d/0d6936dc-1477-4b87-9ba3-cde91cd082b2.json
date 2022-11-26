@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "说明书2",
+    "texture": "06049ddc-e0c1-4683-9aea-7d4473eff938",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      3076,
+      2524
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      3076,
+      2524
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

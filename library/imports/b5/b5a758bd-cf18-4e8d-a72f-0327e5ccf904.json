@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "云朵4",
+    "texture": "c528995e-61fd-4bf8-9c17-97708f500f17",
+    "atlas": "",
+    "rect": [
+      0,
+      57,
+      658,
+      489
+    ],
+    "offset": [
+      0,
+      27.5
+    ],
+    "originalSize": [
+      658,
+      658
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dantian",
+    "texture": "04cfa189-f608-4e94-ad3f-5af64d599b50",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      313,
+      313
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      313,
+      313
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

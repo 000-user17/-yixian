@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "打坐",
+    "texture": "00a6c83e-41a8-4162-9472-5e258426e3c7",
+    "atlas": "",
+    "rect": [
+      12,
+      0,
+      635,
+      641
+    ],
+    "offset": [
+      0.5,
+      8.5
+    ],
+    "originalSize": [
+      658,
+      658
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

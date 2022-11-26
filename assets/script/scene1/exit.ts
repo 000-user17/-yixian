@@ -11,9 +11,6 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class exit extends cc.Component {
 
-    @property(cc.Prefab)
-    shut_button: cc.Prefab = null;
-
     @property(cc.Label)
     label: cc.Label = null;
 
@@ -28,9 +25,19 @@ export default class exit extends cc.Component {
 
         //触摸关闭按钮关闭面板
         this.node.on(cc.Node.EventType.TOUCH_START, (event)=>{
+
+            cc.loader.loadRes("关闭", cc.AudioClip, (res,clip)=>{
+                //播放音乐
+                let audioID: number = cc.audioEngine.playEffect(clip, false);
+                cc.audioEngine.setVolume(audioID, 0.3);
+                //停止播放音乐
+                //cc.audioEngine.stop(audioID);
+            });
+
             let panel = this.node.getParent();
-            
             panel.active = false;
+            cc.find('persist_node').getComponent('persist_node').focus = null
+            
             
         
         });

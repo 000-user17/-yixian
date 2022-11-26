@@ -29,56 +29,33 @@ export default class attribute_panel extends cc.Component {
     a6: cc.Label = null;
     @property(cc.Label)
     a7: cc.Label = null;
+    @property(cc.Label)
+    a8: cc.Label = null;
     
-
+    @property
+    attr = null
 
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
 
     start () {
-
-        //触摸面板
-        this.node.on(cc.Node.EventType.TOUCH_START, (event)=>{
-            cc.find('player').getComponent('player').setattribute(1,30); //测试是否能实时增加
-
+        this.attr = [this.a0 ,this.a1, this.a2, this.a3, this.a4, this.a5, this.a6, this.a7, this.a8]
         
+        this.node.on(cc.Node.EventType.TOUCH_MOVE, (event)=>{  //拖动属性面板
+            var delta = event.touch.getDelta();   //获得鼠标的位置变化坐标
+            this.node.x += delta.x;
+            this.node.y += delta.y;
+
         });
-
-        
-        
-
     }
 
      update (dt) {
-
+        let p_node = cc.find('persist_node').getComponent("persist_node")
         //获取player属性值
-        let attribute_array = cc.find('player').getComponent("player").getattribute(); //由于player脚本初始化该节点父节点为cc.director.getScene()，所以用cc.find顺着根目录查找到player节点
-        
-        //将属性值投射到属性值面板上
-        this.a0 = this.node.getChildByName("a0").getComponent(cc.Label);
-        this.a0.getComponent(cc.Label).string = " " + attribute_array[0];
-
-        this.a1 = this.node.getChildByName("a1").getComponent(cc.Label);
-        this.a1.getComponent(cc.Label).string = " " + attribute_array[1];
-
-        this.a2 = this.node.getChildByName("a2").getComponent(cc.Label);
-        this.a2.getComponent(cc.Label).string = " " + attribute_array[2];
-
-        this.a3 = this.node.getChildByName("a3").getComponent(cc.Label);
-        this.a3.getComponent(cc.Label).string = " " + attribute_array[3];
-
-        this.a4 = this.node.getChildByName("a4").getComponent(cc.Label);
-        this.a4.getComponent(cc.Label).string = " " + attribute_array[4];
-
-        this.a5 = this.node.getChildByName("a5").getComponent(cc.Label);
-        this.a5.getComponent(cc.Label).string = " " + attribute_array[5];
-
-        this.a6 = this.node.getChildByName("a6").getComponent(cc.Label);
-        this.a6.getComponent(cc.Label).string = " " + attribute_array[6];
-
-        this.a7 = this.node.getChildByName("a7").getComponent(cc.Label);
-        this.a7.getComponent(cc.Label).string = " " + attribute_array[7];
-
+        for (let i = 0; i < this.attr.length; ++i)
+        {
+            this.attr[i].string = p_node.attribute_name[i]+': '+p_node.get_attr(p_node.attribute_name[i])
+        }
      }
 }

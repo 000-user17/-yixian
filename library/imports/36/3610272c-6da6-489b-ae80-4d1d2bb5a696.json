@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "danyao5",
+    "texture": "67a46efe-b45c-4f16-938e-94db264a15e1",
+    "atlas": "",
+    "rect": [
+      16,
+      37,
+      225,
+      204
+    ],
+    "offset": [
+      0.5,
+      -11
+    ],
+    "originalSize": [
+      256,
+      256
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

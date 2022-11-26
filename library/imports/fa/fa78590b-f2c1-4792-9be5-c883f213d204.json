@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "抽牌按钮",
+    "texture": "10258450-1e80-4101-8283-d026bea79aca",
+    "atlas": "",
+    "rect": [
+      306,
+      153,
+      844,
+      843
+    ],
+    "offset": [
+      34,
+      3.5
+    ],
+    "originalSize": [
+      1388,
+      1156
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

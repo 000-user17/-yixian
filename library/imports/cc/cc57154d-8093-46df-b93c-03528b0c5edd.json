@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "仙气",
+    "texture": "33e7ee81-b533-472f-b2b4-27abfa7ecb14",
+    "atlas": "",
+    "rect": [
+      0,
+      9,
+      658,
+      701
+    ],
+    "offset": [
+      0,
+      -4.5
+    ],
+    "originalSize": [
+      658,
+      710
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

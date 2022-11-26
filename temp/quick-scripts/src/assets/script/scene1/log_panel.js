@@ -36,14 +36,19 @@ var log_panel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     // LIFE-CYCLE CALLBACKS:
-    // onLoad () {}
-    //游戏操作中日志的保存
-    log_panel.prototype.log_add = function () {
+    log_panel.prototype.onLoad = function () {
     };
     log_panel.prototype.start = function () {
+        var _this = this;
+        cc.find('persist_node').getComponent('persist_node').log_init(false); //新建立该节点时，将保存节点中的所有日志记录写入日志，分为两种情况，第一是初始化场景，第二是切换场景销毁了该节点，然后重新创建时
         //触摸日志
-        this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
+        this.node.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
+            var delta = event.touch.getDelta(); //获得鼠标的位置变化坐标
+            _this.node.x += delta.x;
+            _this.node.y += delta.y;
         });
+    };
+    log_panel.prototype.update = function (dt) {
     };
     log_panel = __decorate([
         ccclass

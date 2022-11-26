@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "经验条",
+    "texture": "a2ef82da-379e-45aa-9887-fef9cd774e8a",
+    "atlas": "",
+    "rect": [
+      14,
+      259,
+      624,
+      116
+    ],
+    "offset": [
+      -3,
+      12
+    ],
+    "originalSize": [
+      658,
+      658
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

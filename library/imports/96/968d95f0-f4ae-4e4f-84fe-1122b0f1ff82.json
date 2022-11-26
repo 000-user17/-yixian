@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "渡劫",
+    "texture": "4f643301-eac3-4876-a043-893ca0957c87",
+    "atlas": "",
+    "rect": [
+      0,
+      51,
+      342,
+      191
+    ],
+    "offset": [
+      0,
+      -2.5
+    ],
+    "originalSize": [
+      342,
+      288
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

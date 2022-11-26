@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn-bg-hover",
+    "texture": "9ac77fbe-fb5d-4591-a4bf-d5acc91f0301",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      155,
+      186
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      155,
+      186
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

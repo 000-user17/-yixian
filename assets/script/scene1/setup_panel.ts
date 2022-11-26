@@ -8,27 +8,36 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class setup_panel extends cc.Component {
 
-    @property(cc.Label)
-    label: cc.Label = null;
-
-    @property
-    text: string = 'hello';
+    isplay:boolean = true;
 
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
 
+	//播放音乐
+
+
     start () {
-
-        //触摸设置面板
-        this.node.on(cc.Node.EventType.TOUCH_START, (event)=>{
+         //触摸打开和关闭声音
+         this.node.on(cc.Node.EventType.TOUCH_START, (event)=>{
+            if(this.isplay){
+                cc.audioEngine.pauseAll();
+                this.isplay = false;
+                
+            }
+            else{
+                cc.audioEngine.resumeAll();
+                this.isplay = true;
+            }
             
-        
-        });
-
+            
+            });
     }
 
-    // update (dt) {}
+    update (dt) {
+
+
+    }
 }

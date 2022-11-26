@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "结束抽牌",
+    "texture": "51917696-af15-4dff-91cf-965d47c4a81e",
+    "atlas": "",
+    "rect": [
+      306,
+      153,
+      844,
+      843
+    ],
+    "offset": [
+      34,
+      3.5
+    ],
+    "originalSize": [
+      1388,
+      1156
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

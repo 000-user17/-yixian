@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tupo1",
+    "texture": "cf133df8-0d11-4f88-9be7-8b20d803cd70",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      276,
+      276
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      276,
+      276
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

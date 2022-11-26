@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jingmai",
+    "texture": "eb314eb3-0564-4dc8-91ca-2c1ab304db60",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      376,
+      653
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      376,
+      653
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -35,7 +35,6 @@ var exit = /** @class */ (function (_super) {
     __extends(exit, _super);
     function exit() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.shut_button = null;
         _this.label = null;
         _this.text = 'hello';
         return _this;
@@ -47,13 +46,18 @@ var exit = /** @class */ (function (_super) {
         var _this = this;
         //触摸关闭按钮关闭面板
         this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
+            cc.loader.loadRes("关闭", cc.AudioClip, function (res, clip) {
+                //播放音乐
+                var audioID = cc.audioEngine.playEffect(clip, false);
+                cc.audioEngine.setVolume(audioID, 0.3);
+                //停止播放音乐
+                //cc.audioEngine.stop(audioID);
+            });
             var panel = _this.node.getParent();
             panel.active = false;
+            cc.find('persist_node').getComponent('persist_node').focus = null;
         });
     };
-    __decorate([
-        property(cc.Prefab)
-    ], exit.prototype, "shut_button", void 0);
     __decorate([
         property(cc.Label)
     ], exit.prototype, "label", void 0);
